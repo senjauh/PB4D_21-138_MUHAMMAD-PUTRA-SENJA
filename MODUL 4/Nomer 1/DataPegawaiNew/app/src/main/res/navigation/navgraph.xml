@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/loginFrag">
+
+    <fragment
+        android:id="@+id/loginFrag"
+        android:name="com.example.datapegawainew.LoginFrag"
+        android:label="fragment_login2"
+        tools:layout="@layout/fragment_login2" >
+        <action
+            android:id="@+id/action_loginFrag_to_homeFrag"
+            app:destination="@id/homeFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFrag"
+        android:name="com.example.datapegawainew.HomeFrag"
+        android:label="fragment_home2"
+        tools:layout="@layout/fragment_home2" >
+        <action
+            android:id="@+id/action_homeFrag_to_dataFrag"
+            app:destination="@id/dataFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataFrag"
+        android:name="com.example.datapegawainew.DataFrag"
+        android:label="fragment_data2"
+        tools:layout="@layout/fragment_data2" >
+        <action
+            android:id="@+id/action_dataFrag_to_homeFrag"
+            app:destination="@id/homeFrag" />
+    </fragment>
+</navigation>
